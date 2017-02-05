@@ -1,0 +1,13 @@
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# misc
+npm-debug.log
