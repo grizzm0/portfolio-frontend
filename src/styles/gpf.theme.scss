@@ -8,16 +8,16 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$gpf-app-primary: md-palette($md-indigo);
-$gpf-app-accent:  md-palette($md-pink, A200, A100, A400);
+$gpf-primary: md-palette($md-indigo);
+$gpf-accent:  md-palette($md-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$gpf-app-warn:    md-palette($md-red);
+$gpf-warn:    md-palette($md-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$gpf-app-theme:   md-light-theme($gpf-app-primary, $gpf-app-accent, $gpf-app-warn);
+$gpf-theme:   md-light-theme($gpf-primary, $gpf-accent, $gpf-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($gpf-app-theme);
+@include angular-material-theme($gpf-theme);
