@@ -1,0 +1,5 @@
+@import '~@angular/material/core/theming/theming';
+
+$gpf-primary: md-palette($md-indigo);
+$gpf-accent:  md-palette($md-pink, A200, A100, A400);
+$gpf-warn:    md-palette($md-red);
