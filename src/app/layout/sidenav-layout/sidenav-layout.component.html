@@ -1,0 +1,13 @@
+<gpf-toolbar *ngIf="!isSmallScreen()" [isSmallScreen]="isSmallScreen()" [drawer]="drawer"></gpf-toolbar>
+
+<md-sidenav-layout [class.is-large-screen]="!isSmallScreen()">
+  <md-sidenav #drawer [opened]="!isSmallScreen()" [mode]="isSmallScreen() ? 'over' : 'side'">
+    Sidenav
+  </md-sidenav>
+
+  <gpf-toolbar *ngIf="isSmallScreen()" [isSmallScreen]="isSmallScreen()" [drawer]="drawer"></gpf-toolbar>
+
+  <main>
+    Content
+  </main>
+</md-sidenav-layout>

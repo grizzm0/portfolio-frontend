@@ -1,13 +1,18 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
+import { LayoutModule } from './layout/layout.module';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+      ],
+      imports: [
+        LayoutModule,
       ],
     });
     TestBed.compileComponents();

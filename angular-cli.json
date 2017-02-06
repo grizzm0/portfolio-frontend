@@ -18,9 +18,12 @@
       "tsconfig": "tsconfig.json",
       "prefix": "gpf",
       "styles": [
-        "styles.scss"
+        "styles/app.scss",
+        "styles/gpf.theme.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/hammerjs/hammer.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
