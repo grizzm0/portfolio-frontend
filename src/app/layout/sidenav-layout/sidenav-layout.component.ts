@@ -11,8 +11,6 @@ const SMALL_WIDTH_BREAKPOINT = 840;
 export class SidenavLayoutComponent implements OnInit {
   @ViewChild(MdSidenav) drawer: MdSidenav;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.shouldDrawerClose();
   }

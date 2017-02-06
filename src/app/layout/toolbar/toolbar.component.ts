@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MdSidenav } from '@angular/material';
 
 @Component({
@@ -6,13 +6,7 @@ import { MdSidenav } from '@angular/material';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
-export class ToolbarComponent implements OnInit {
+export class ToolbarComponent {
   @Input() drawer: MdSidenav;
   @Input() isSmallScreen: boolean;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
