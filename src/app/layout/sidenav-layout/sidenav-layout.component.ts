@@ -19,6 +19,20 @@ export class SidenavLayoutComponent implements OnInit {
     return window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`).matches;
   }
 
+  drawerAction(action: string): void {
+    switch (action) {
+      case 'open':
+        this.drawer.open();
+        break;
+      case 'close':
+        this.drawer.close();
+        break;
+      case 'toggle':
+        this.drawer.toggle();
+        break;
+    }
+  }
+
   private shouldDrawerClose(): void {
     if (this.isSmallScreen() && !this.drawer._isOpened) {
       this.drawer.close();
