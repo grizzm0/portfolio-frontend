@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MdSidenav } from '@angular/material';
 
-const SMALL_WIDTH_BREAKPOINT = 840;
+const MD_BREAKPOINT = 960;
 
 @Component({
   selector: 'gpf-sidenav-layout',
@@ -16,7 +16,7 @@ export class SidenavLayoutComponent implements OnInit {
   }
 
   isSmallScreen(): boolean {
-    return window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`).matches;
+    return window.matchMedia(`(max-width: ${MD_BREAKPOINT}px)`).matches;
   }
 
   drawerAction(action: string): void {
