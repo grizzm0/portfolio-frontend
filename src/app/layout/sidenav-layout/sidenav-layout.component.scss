@@ -4,7 +4,7 @@ $sidenav-width: 256px;
 md-sidenav-layout {
   height: 100vh;
 
-  &.is-large-screen {
+  &:not(.is-small-screen) {
     height: calc(100vh - 64px);
   }
 
