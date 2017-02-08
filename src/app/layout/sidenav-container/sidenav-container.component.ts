@@ -4,11 +4,11 @@ import { MdSidenav } from '@angular/material';
 const MD_BREAKPOINT = 960;
 
 @Component({
-  selector: 'gpf-sidenav-layout',
-  templateUrl: './sidenav-layout.component.html',
-  styleUrls: ['./sidenav-layout.component.scss']
+  selector: 'gpf-sidenav-container',
+  templateUrl: './sidenav-container.component.html',
+  styleUrls: ['./sidenav-container.component.scss']
 })
-export class SidenavLayoutComponent implements OnInit {
+export class SidenavContainerComponent implements OnInit {
   @ViewChild(MdSidenav) drawer: MdSidenav;
 
   ngOnInit(): void {

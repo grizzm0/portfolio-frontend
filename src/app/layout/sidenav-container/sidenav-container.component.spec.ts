@@ -2,12 +2,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MaterialModule } from '@angular/material';
 
-import { SidenavLayoutComponent } from './sidenav-layout.component';
+import { SidenavContainerComponent } from './sidenav-container.component';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 
-describe('SidenavLayoutComponent', () => {
-  let component: SidenavLayoutComponent;
-  let fixture: ComponentFixture<SidenavLayoutComponent>;
+describe('SidenavContainerComponent', () => {
+  let component: SidenavContainerComponent;
+  let fixture: ComponentFixture<SidenavContainerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -15,7 +15,7 @@ describe('SidenavLayoutComponent', () => {
         MaterialModule.forRoot(),
       ],
       declarations: [
-        SidenavLayoutComponent,
+        SidenavContainerComponent,
         ToolbarComponent,
       ],
     })
@@ -23,7 +23,7 @@ describe('SidenavLayoutComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidenavLayoutComponent);
+    fixture = TestBed.createComponent(SidenavContainerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

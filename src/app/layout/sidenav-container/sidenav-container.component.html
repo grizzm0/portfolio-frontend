@@ -1,6 +1,6 @@
 <gpf-toolbar *ngIf="!isSmallScreen()" [isSmallScreen]="isSmallScreen()"></gpf-toolbar>
 
-<md-sidenav-layout [class.is-small-screen]="isSmallScreen()">
+<md-sidenav-container [class.is-small-screen]="isSmallScreen()">
   <md-sidenav [opened]="!isSmallScreen()" [mode]="isSmallScreen() ? 'over' : 'side'">
     Sidenav
   </md-sidenav>
@@ -10,4 +10,4 @@
   <main>
     Content
   </main>
-</md-sidenav-layout>
+</md-sidenav-container>

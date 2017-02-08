@@ -1,7 +1,7 @@
 $main-padding: 16px;
 $sidenav-width: 256px;
 
-md-sidenav-layout {
+md-sidenav-container {
   height: 100vh;
 
   &:not(.is-small-screen) {
