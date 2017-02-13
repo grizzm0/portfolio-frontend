@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
 import { MdSidenav } from '@angular/material';
+
+import { SidenavContainerComponent } from '../sidenav-container/sidenav-container.component';
 
 @Component({
   selector: 'gpf-toolbar',
@@ -8,5 +11,11 @@ import { MdSidenav } from '@angular/material';
 })
 export class ToolbarComponent {
   @Input() drawer: MdSidenav;
-  @Input() isSmallScreen: boolean;
+
+  constructor(private media: ObservableMedia) {
+  }
+
+  get hideDrawerButton(): boolean {
+    return !this.media.isActive(SidenavContainerComponent.BREAKPOINT);
+  }
 }

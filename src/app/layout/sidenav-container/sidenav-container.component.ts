@@ -1,32 +1,20 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
 import { MdSidenav } from '@angular/material';
-
-const MD_BREAKPOINT = 960;
 
 @Component({
   selector: 'gpf-sidenav-container',
   templateUrl: './sidenav-container.component.html',
   styleUrls: ['./sidenav-container.component.scss']
 })
-export class SidenavContainerComponent implements OnInit {
+export class SidenavContainerComponent {
+  static BREAKPOINT = 'gt-sm';
   @ViewChild(MdSidenav) drawer: MdSidenav;
 
-  ngOnInit(): void {
-    this.shouldDrawerClose();
+  constructor(private media: ObservableMedia) {
   }
 
-  isSmallScreen(): boolean {
-    return window.matchMedia(`(max-width: ${MD_BREAKPOINT}px)`).matches;
-  }
-
-  private shouldDrawerClose(): void {
-    if (this.isSmallScreen() && !this.drawer._isOpened) {
-      this.drawer.close();
-    }
-  }
-
-  @HostListener('window:resize')
-  private onResize() {
-    this.shouldDrawerClose();
+  get hiddenDrawer(): boolean {
+    return !this.media.isActive(SidenavContainerComponent.BREAKPOINT);
   }
 }
