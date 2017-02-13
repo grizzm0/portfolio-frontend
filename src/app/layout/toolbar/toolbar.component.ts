@@ -16,6 +16,6 @@ export class ToolbarComponent {
   }
 
   get hideDrawerButton(): boolean {
-    return !this.media.isActive(SidenavContainerComponent.BREAKPOINT);
+    return this.drawer && !this.media.isActive(SidenavContainerComponent.BREAKPOINT);
   }
 }
