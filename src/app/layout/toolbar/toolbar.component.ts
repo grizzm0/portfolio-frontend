@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MdSidenav } from '@angular/material';
 
 @Component({
   selector: 'gpf-toolbar',
@@ -6,10 +7,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent {
+  @Input() drawer: MdSidenav;
   @Input() isSmallScreen: boolean;
-  @Output() drawer = new EventEmitter<string>();
-
-  toggleDrawer(): void {
-    this.drawer.emit('toggle');
-  }
 }
