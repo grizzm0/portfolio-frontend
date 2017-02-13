@@ -1,11 +1,11 @@
-<gpf-toolbar *ngIf="!hiddenDrawer"></gpf-toolbar>
+<gpf-toolbar *ngIf="!hideDrawer"></gpf-toolbar>
 
-<md-sidenav-container [class.is-small-screen]="hiddenDrawer">
-  <md-sidenav [opened]="!hiddenDrawer" [mode]="hiddenDrawer ? 'over' : 'side'">
+<md-sidenav-container [class.hide-drawer]="hideDrawer">
+  <md-sidenav [opened]="!hideDrawer" [mode]="hideDrawer ? 'over' : 'side'">
     Sidenav
   </md-sidenav>
 
-  <gpf-toolbar *ngIf="hiddenDrawer" [drawer]="drawer"></gpf-toolbar>
+  <gpf-toolbar *ngIf="hideDrawer" [drawer]="drawer"></gpf-toolbar>
 
   <main>
     Content

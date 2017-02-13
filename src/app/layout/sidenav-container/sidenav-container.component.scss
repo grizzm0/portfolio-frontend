@@ -4,7 +4,7 @@ $sidenav-width: 256px;
 md-sidenav-container {
   height: 100vh;
 
-  &:not(.is-small-screen) {
+  &:not(.hide-drawer) {
     height: calc(100vh - 64px);
   }
 

@@ -14,7 +14,7 @@ export class SidenavContainerComponent {
   constructor(private media: ObservableMedia) {
   }
 
-  get hiddenDrawer(): boolean {
+  get hideDrawer(): boolean {
     return !this.media.isActive(SidenavContainerComponent.BREAKPOINT);
   }
 }
