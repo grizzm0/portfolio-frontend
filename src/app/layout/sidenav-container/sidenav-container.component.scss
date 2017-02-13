@@ -25,7 +25,7 @@ main {
   padding: 0 16px;
   width: calc(100vw - #{$main-padding*2});
 
-  .is-large-screen & {
+  md-sidenav-container:not(.hide-drawer) & {
     width: calc(100vw - #{$main-padding*2} - #{$sidenav-width});
   }
 }
