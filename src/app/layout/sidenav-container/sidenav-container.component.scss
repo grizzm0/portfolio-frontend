@@ -1,31 +1,45 @@
-$main-padding: 16px;
-$sidenav-width: 256px;
+@import '~@angular/material/core/style/variables';
+@import '../../../styles/mixins';
+
+// TODO: Look over these to see if they've been extracted to their own variables file in later version of @angular/material
+// TODO: https://github.com/angular/material2/issues/3085
+$md-toolbar-height-desktop: 64px !default;
+$md-toolbar-height-mobile-portrait: 56px !default;
+$md-toolbar-height-mobile-landscape: 48px !default;
 
 md-sidenav-container {
-  height: 100vh;
+  @include absolute();
 
   &:not(.hide-drawer) {
-    height: calc(100vh - 64px);
-  }
+    top: $md-toolbar-height-desktop;
 
-  /deep/ .md-sidenav-content {
-    display: flex;
-    flex-direction: column;
+    @media ($md-xsmall) and (orientation: portrait) {
+      top: $md-toolbar-height-mobile-portrait;
+    }
+
+    @media ($md-small) and (orientation: landscape) {
+      top: $md-toolbar-height-mobile-landscape;
+    }
   }
 }
 
 md-sidenav {
-  width: $sidenav-width;
+  width: 256px;
 }
 
 main {
-  flex-grow: 1;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 16px;
-  width: calc(100vw - #{$main-padding*2});
+  overflow-y: auto;
+  @include absolute();
 
-  md-sidenav-container:not(.hide-drawer) & {
-    width: calc(100vw - #{$main-padding*2} - #{$sidenav-width});
+  md-sidenav-container.hide-drawer & {
+    top: $md-toolbar-height-desktop;
+
+    @media ($md-xsmall) and (orientation: portrait) {
+      top: $md-toolbar-height-mobile-portrait;
+    }
+
+    @media ($md-small) and (orientation: landscape) {
+      top: $md-toolbar-height-mobile-landscape;
+    }
   }
 }
