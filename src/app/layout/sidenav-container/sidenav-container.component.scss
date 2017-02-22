@@ -3,22 +3,22 @@
 
 // TODO: Look over these to see if they've been extracted to their own variables file in later version of @angular/material
 // TODO: https://github.com/angular/material2/issues/3085
-$md-toolbar-height-desktop: 64px !default;
-$md-toolbar-height-mobile-portrait: 56px !default;
-$md-toolbar-height-mobile-landscape: 48px !default;
+$mat-toolbar-height-desktop: 64px !default;
+$mat-toolbar-height-mobile-portrait: 56px !default;
+$mat-toolbar-height-mobile-landscape: 48px !default;
 
 md-sidenav-container {
   @include absolute();
 
   &:not(.hide-drawer) {
-    top: $md-toolbar-height-desktop;
+    top: $mat-toolbar-height-desktop;
 
-    @media ($md-xsmall) and (orientation: portrait) {
-      top: $md-toolbar-height-mobile-portrait;
+    @media ($mat-xsmall) and (orientation: portrait) {
+      top: $mat-toolbar-height-mobile-portrait;
     }
 
-    @media ($md-small) and (orientation: landscape) {
-      top: $md-toolbar-height-mobile-landscape;
+    @media ($mat-small) and (orientation: landscape) {
+      top: $mat-toolbar-height-mobile-landscape;
     }
   }
 }
@@ -32,14 +32,14 @@ main {
   @include absolute();
 
   md-sidenav-container.hide-drawer & {
-    top: $md-toolbar-height-desktop;
+    top: $mat-toolbar-height-desktop;
 
-    @media ($md-xsmall) and (orientation: portrait) {
-      top: $md-toolbar-height-mobile-portrait;
+    @media ($mat-xsmall) and (orientation: portrait) {
+      top: $mat-toolbar-height-mobile-portrait;
     }
 
-    @media ($md-small) and (orientation: landscape) {
-      top: $md-toolbar-height-mobile-landscape;
+    @media ($mat-small) and (orientation: landscape) {
+      top: $mat-toolbar-height-mobile-landscape;
     }
   }
 }
