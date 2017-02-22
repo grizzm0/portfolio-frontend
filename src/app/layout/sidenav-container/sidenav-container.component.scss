@@ -24,6 +24,7 @@ md-sidenav-container {
 }
 
 md-sidenav {
+  max-width: calc(100vw - 56px);
   width: 256px;
 }
 
