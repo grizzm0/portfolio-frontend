@@ -42,4 +42,8 @@ main {
       top: $mat-toolbar-height-mobile-landscape;
     }
   }
+
+  /deep/ > router-outlet + * {
+    @include main-content();
+  }
 }

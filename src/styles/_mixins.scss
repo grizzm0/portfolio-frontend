@@ -6,10 +6,12 @@
   left: 0;
 }
 
-@mixin main-component() {
+@mixin main-content() {
   @include absolute();
 
+  box-sizing: border-box;
   margin: auto;
   max-width: 1200px;
+  padding: 16px;
   width: 100%;
 }
