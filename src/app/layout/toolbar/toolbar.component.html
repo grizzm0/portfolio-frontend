@@ -1,4 +1,6 @@
 <md-toolbar color="primary" class="mat-elevation-z2">
-  <md-icon id="drawer-toggle" (click)="drawer.toggle()" *ngIf="hideDrawerButton">menu</md-icon>
+  <button md-icon-button (click)="drawer.toggle()" *ngIf="hideDrawerButton">
+    <md-icon>menu</md-icon>
+  </button>
   <span>grizzm0's portfolio</span>
 </md-toolbar>
