@@ -1,0 +1,5 @@
+@import '~@angular/material/core/theming/all-theme';
+@import 'themes/gpf';
+
+@include mat-core();
+@include angular-material-theme($theme);
