@@ -1,0 +1,9 @@
+@import '~@angular/material/core/theming/theming';
+
+@mixin gpf-sidenav-container-theme($theme) {
+  $foreground: map-get($theme, foreground);
+
+  md-sidenav {
+    border-right: 1px solid mat-color($foreground, divider);
+  }
+}

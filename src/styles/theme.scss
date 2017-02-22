@@ -3,3 +3,8 @@
 
 @include mat-core();
 @include angular-material-theme($theme);
+
+// Custom components
+@import '../app/layout/sidenav-container/sidenav-container.theme';
+
+@include gpf-sidenav-container-theme($theme);
